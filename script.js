@@ -41,11 +41,11 @@ searchText.addEventListener('keypress',(e)=>{
 const render = ({items}) => {
     const target = document.getElementById('target');
     target.innerHTML = "";
-
     items.forEach(({snippet,id}) => {
-
+        
         const videoBox = document.createElement('a');
         videoBox.href = `videoDetail.html?id=${id.videoId}`
+        const channelId=snippet.channelId;
 
         videoBox.innerHTML = `
         <div class="video-box">
@@ -53,10 +53,11 @@ const render = ({items}) => {
             <div class="video-title">
                 ${snippet.title.trim()}
             <div>
-            <div class='channel'>
-                ${snippet.channelTitle}
-            </div>
+           
         </div>
+        <a class='channel' href="channel.html?id=${channelId}">
+        ${snippet.channelTitle}
+        </a>
         `
 
         target.appendChild(videoBox);
