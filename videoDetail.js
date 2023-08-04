@@ -1,7 +1,7 @@
 const menu = document.getElementById("left-menu");
 const leftNav = document.getElementById('left-nav');
 
-const key = "AIzaSyD8prMBNQI47-eb3tRMDR1hONDO2-7YS9E"
+const key = "AIzaSyBFzUxTYn8vKlhYDtooqLHVCANy4Ao3gOs"
 const baseURL = "https://www.googleapis.com/youtube/v3/";
 const videoURL = 'videos?part=snippet,contentDetails,statistics';
 const channelURL = 'channels?part=snippet,statistics';
